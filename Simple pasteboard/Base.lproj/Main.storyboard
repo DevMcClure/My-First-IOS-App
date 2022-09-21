@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Simple_pasteboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="29B-Zv-5gh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ykm-YJ-cUK">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem title="Item" systemItem="trash" id="lk2-dK-8Y1">
+                                        <connections>
+                                            <action selector="trashWasPressed:" destination="BYZ-38-t0r" id="00d-dy-PdV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ykm-YJ-cUK" firstAttribute="top" secondItem="29B-Zv-5gh" secondAttribute="bottom" id="3oe-VI-d7Y"/>
+                            <constraint firstItem="29B-Zv-5gh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6iS-dV-t0C"/>
+                            <constraint firstItem="Ykm-YJ-cUK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="74O-0R-FOj"/>
+                            <constraint firstItem="Ykm-YJ-cUK" firstAttribute="top" secondItem="29B-Zv-5gh" secondAttribute="bottom" id="AOD-Kf-8Kg"/>
+                            <constraint firstItem="Ykm-YJ-cUK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YEF-Jf-ZsI"/>
+                            <constraint firstItem="Ykm-YJ-cUK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jFd-eu-omL"/>
+                            <constraint firstItem="29B-Zv-5gh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="n7S-k1-QSG"/>
+                            <constraint firstItem="29B-Zv-5gh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ruG-2c-fU3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="29B-Zv-5gh" id="wsd-bR-g7p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-335" y="-169"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
